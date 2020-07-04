@@ -1,0 +1,32 @@
+extends layout
+block bodystyle
+    body(style='background-image: url("../images/img1.jpg"); background-attachment: fixed; background-repeat: no-repeat; background-size: 100% 100%;')
+    link(rel='stylesheet' href='../bower_components/bootstrap/dist/css/bootstrap.min.css')
+    script(src='../bower_components/bootstrap/dist/js/bootstrap.min.js')
+    script(src='../bower_components/jquery/dist/jquery.min.js')
+    link(rel="stylesheet" href="mycss/issue.css")
+block content
+  h1 Survey of Student
+  h2= student.enroll
+  table.table.table-bordered.table-striped(style='width:100%; border:1px solid black; background-color:white;')
+      tr
+        th Enrollment 
+        th Name
+        th Library Card
+        th Branch 
+        th Semester
+        th Email
+        th Mobile
+        
+      tr
+        td #{student.enroll}
+        td #{student.name}
+        td #{student.libcard}
+        td #{student.branch}
+        td #{student.sem}
+        td #{student.email}
+        td #{student.mobile}
+        td 
+          a(href="/students/edit/"+student._id)="EDIT"
+          
+

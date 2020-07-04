@@ -1,0 +1,13 @@
+extends layout
+block bodystyle
+    body(style='background-image: url("../images/img1.jpg"); background-attachment: fixed; background-repeat: no-repeat; background-size: 100% 100%;')
+    link(rel='stylesheet' href='../bower_components/bootstrap/dist/css/bootstrap.min.css')
+    script(src='../bower_components/bootstrap/dist/js/bootstrap.min.js')
+    script(src='../bower_components/jquery/dist/jquery.min.js')
+    link(rel="stylesheet" href="mycss/index.css")
+block content
+  h2 Surveys Done
+  ul.list-group
+    each student, i in students
+      li.list-group-item
+        a(href="/students/"+student._id)= student.enroll
