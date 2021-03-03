@@ -17,6 +17,6 @@
     "express-validator": "^3.2.0",
     "messages": "^0.1.0",
     "mongoose": "^5.9.21",
-    "pug": "^3.0.0"
+    "pug": "^3.0.1"
   }
 }
